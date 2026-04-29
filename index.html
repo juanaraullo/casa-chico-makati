@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0125)file:///Users/johnaraullo/Desktop/airbnb-host-agent/guest-guide/Welcome11%20%E2%80%94%20Your%20Home%20Away%20From%20Home.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome — Your Home Away From Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-dark: #A8893A;
+      --gold-light: #FDF6E3;
+      --taupe: #8B7355;
+      --cream: #FAF8F4;
+      --warm-white: #FFFFFF;
+      --warm-100: #F5EFE6;
+      --warm-200: #E8DDD0;
+      --warm-300: #D4C4B0;
+      --warm-400: #B0A090;
+      --warm-600: #6B5B45;
+      --warm-800: #5C4A38;
+      --radius: 16px;
+      --shadow: 0 4px 32px rgba(80,55,20,0.09);
+      --shadow-sm: 0 2px 12px rgba(80,55,20,0.07);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--cream);
+      color: var(--warm-800);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ─────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(160deg, #2C2416 0%, #4A3525 60%, #5C4232 100%);
+      color: #F5EFE6;
+      padding: 52px 24px 68px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 32px;
+      background: var(--cream);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      z-index: 1;
+    }
+    .hero-icon { font-size: 48px; margin-bottom: 14px; display: block; position: relative; z-index: 2; }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      color: #F5EFE6;
+      position: relative; z-index: 2;
+    }
+    .hero p {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      position: relative; z-index: 2;
+    }
+    .hero-divider {
+      width: 40px; height: 1px;
+      background: var(--gold);
+      margin: 10px auto 10px;
+      position: relative; z-index: 2;
+    }
+
+    /* ── Layout ───────────────────────────────────────────── */
+    .container { max-width: 480px; margin: 0 auto; padding: 0 16px 100px; }
+
+    /* ── Quick Info Bar ───────────────────────────────────── */
+    .quick-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin: -28px 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+    .quick-item {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 14px 8px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      cursor: default;
+      border-bottom: 2px solid var(--gold);
+    }
+    .quick-item .qi-icon { font-size: 20px; margin-bottom: 5px; display: block; }
+    .quick-item .qi-label { font-size: 9px; color: var(--warm-400); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .quick-item .qi-val { font-size: 13px; font-weight: 600; color: var(--warm-800); margin-top: 2px; }
+
+    /* ── Section Nav ──────────────────────────────────────── */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 0 14px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    .nav-tab {
+      flex-shrink: 0;
+      background: var(--warm-white);
+      border: 1.5px solid var(--warm-200);
+      border-radius: 24px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0.3px;
+      color: var(--warm-600);
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .nav-tab:hover, .nav-tab.active {
+      background: var(--warm-800);
+      border-color: var(--warm-800);
+      color: var(--gold);
+    }
+
+    /* ── Card ─────────────────────────────────────────────── */
+    .card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--warm-200);
+    }
+    .card-title {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--warm-200);
+    }
+
+    /* ── Section ──────────────────────────────────────────── */
+    .section { display: none; }
+    .section.visible { display: block; }
+
+    /* ── Info Row ─────────────────────────────────────────── */
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--warm-100);
+    }
+    .info-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .info-icon { font-size: 19px; flex-shrink: 0; margin-top: 1px; }
+    .info-label { font-size: 11px; color: var(--warm-400); margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 500; }
+    .info-val { font-size: 15px; font-weight: 500; color: var(--warm-800); }
+    .info-val.code {
+      font-family: 'Courier New', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      letter-spacing: 3px;
+    }
+
+    /* ── Step List ────────────────────────────────────────── */
+    .step-list { counter-reset: steps; }
+    .step {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--warm-100);
+      align-items: flex-start;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      counter-increment: steps;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--warm-800);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Cormorant Garamond', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--gold-dark);
+    }
+    .step-num::before { content: counter(steps); }
+    .step-text { font-size: 14px; padding-top: 4px; }
+    .step-text strong { font-weight: 600; display: block; margin-bottom: 2px; color: var(--warm-800); }
+    .step-text span { color: var(--warm-600); font-size: 13px; }
+
+    /* ── Accordion ────────────────────────────────────────── */
+    .accordion-item { border-bottom: 1px solid var(--warm-100); }
+    .accordion-item:last-child { border-bottom: none; }
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      cursor: pointer;
+      text-align: left;
+      gap: 12px;
+    }
+    .accordion-trigger-left { display: flex; align-items: center; gap: 12px; }
+    .acc-icon { font-size: 19px; }
+    .acc-label { font-size: 14px; font-weight: 500; color: var(--warm-800); }
+    .acc-arrow {
+      font-size: 11px;
+      color: var(--gold);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .accordion-item.open .acc-arrow { transform: rotate(180deg); }
+    .accordion-body {
+      display: none;
+      padding: 0 0 14px 32px;
+      font-size: 14px;
+      color: var(--warm-600);
+      line-height: 1.75;
+    }
+    .accordion-item.open .accordion-body { display: block; }
+
+    /* ── Rule Tags ────────────────────────────────────────── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .rule-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--warm-100);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .rule-tag.allowed { border-left: 3px solid var(--gold); }
+    .rule-tag.disallowed { border-left: 3px solid var(--taupe); }
+    .rule-tag .rt-icon { font-size: 17px; }
+
+    /* ── Contact Cards ────────────────────────────────────── */
+    .contact-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--warm-100);
+    }
+    .contact-card:last-child { border-bottom: none; }
+    .contact-left { display: flex; align-items: center; gap: 12px; }
+    .contact-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-light), #EFE0C0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      border: 1px solid var(--warm-200);
+    }
+    .contact-name { font-size: 14px; font-weight: 600; color: var(--warm-800); }
+    .contact-role { font-size: 12px; color: var(--warm-400); }
+    .contact-actions { display: flex; gap: 8px; }
+    .contact-btn {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .contact-btn:active { transform: scale(0.9); }
+    .btn-call { background: #3A7D44; color: white; }
+    .btn-msg { background: var(--warm-100); color: var(--warm-800); }
+
+    /* ── Map Placeholder ──────────────────────────────────── */
+    .map-placeholder {
+      background: linear-gradient(135deg, var(--gold-light), #EDE0C8);
+      border-radius: 12px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--warm-600);
+      margin-bottom: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid var(--warm-200);
+    }
+    .map-placeholder span:first-child { font-size: 36px; }
+
+    /* ── Place Tags ───────────────────────────────────────── */
+    .place-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--warm-100);
+    }
+    .place-item:last-child { border-bottom: none; }
+    .place-icon { font-size: 19px; width: 28px; text-align: center; flex-shrink: 0; }
+    .place-info { flex: 1; }
+    .place-name { font-size: 14px; font-weight: 500; color: var(--warm-800); }
+    .place-meta { font-size: 12px; color: var(--warm-400); }
+    .place-dist {
+      font-size: 11px;
+      background: var(--warm-100);
+      color: var(--warm-600);
+      padding: 3px 9px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Badge ────────────────────────────────────────────── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .badge-green { background: #EDF6EC; color: #3A6B35; }
+    .badge-red { background: #F9EEEA; color: #8B3A2A; }
+
+    /* ── CTA Button ───────────────────────────────────────── */
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+      margin-top: 10px;
+    }
+    .cta-btn:active { opacity: 0.85; transform: scale(0.99); }
+    .cta-primary { background: var(--warm-800); color: var(--gold); }
+    .cta-teal { background: var(--gold); color: var(--warm-800); }
+    .cta-outline { background: var(--warm-white); color: var(--warm-800); border: 1.5px solid var(--warm-200); }
+
+    /* ── Copy Button ──────────────────────────────────────── */
+    .copy-wrap { position: relative; display: inline-block; }
+    .copy-btn {
+      background: var(--warm-100);
+      border: 1px solid var(--warm-200);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-left: 8px;
+      transition: background 0.2s;
+      color: var(--warm-600);
+      font-family: 'Jost', sans-serif;
+    }
+    .copy-btn:hover { background: var(--warm-200); }
+    .copy-toast {
+      position: absolute;
+      top: -28px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--warm-800);
+      color: var(--gold);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .copy-toast.show { opacity: 1; }
+
+    /* ── Bottom Nav ───────────────────────────────────────── */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--warm-white);
+      border-top: 1px solid var(--warm-200);
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0 env(safe-area-inset-bottom, 8px);
+      z-index: 100;
+      box-shadow: 0 -4px 24px rgba(80,55,20,0.08);
+    }
+    .bn-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 10px;
+      transition: background 0.15s;
+      color: var(--warm-300);
+      font-size: 10px;
+      font-weight: 500;
+      font-family: 'Jost', sans-serif;
+      letter-spacing: 0.3px;
+      border: none;
+      background: none;
+    }
+    .bn-item .bn-icon { font-size: 21px; line-height: 1; }
+    .bn-item.active { color: var(--gold-dark); }
+    .bn-item:hover { background: var(--warm-100); }
+
+    /* ── SOS Banner ───────────────────────────────────────── */
+    .sos-banner {
+      background: linear-gradient(135deg, #FDF0EC, #FAE8E4);
+      border: 1px solid #E8C4B8;
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      text-decoration: none;
+    }
+    .sos-icon { font-size: 28px; }
+    .sos-text .sos-title { font-size: 14px; font-weight: 700; color: #8B3A2A; }
+    .sos-text .sos-sub { font-size: 12px; color: #A04535; }
+
+    /* ── Responsive tweaks ────────────────────────────────── */
+    @media (min-width: 480px) {
+      .hero { padding: 60px 32px 76px; }
+      .hero h1 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<div class="hero">
+  <span class="hero-icon">🏡</span>
+  <h1>ROOM 965</h1>
+  <p>Everything you need for a perfect stay</p>
+</div>
+
+<!-- ── MAIN ─────────────────────────────────────────────── -->
+<div class="container">
+
+  <!-- Quick Info Bar -->
+  <div class="quick-bar">
+    <div class="quick-item">
+      <span class="qi-icon">🔑</span>
+      <div class="qi-label">Check-in</div>
+      <div class="qi-val">3:00 PM</div>
+    </div>
+    <div class="quick-item">
+      <span class="qi-icon">🧳</span>
+      <div class="qi-label">Check-out</div>
+      <div class="qi-val">12:00 PM</div>
+    </div>
+    <div class="quick-item">
+      <span class="qi-icon">👥</span>
+      <div class="qi-label">Guests</div>
+      <div class="qi-val">Up to 3</div>
+    </div>
+  </div>
+
+  <!-- Nav Tabs -->
+  <div class="nav-tabs" id="navTabs">
+    <button class="nav-tab" onclick="showSection(&#39;arrival&#39;)">🔑 Arrival</button>
+    <button class="nav-tab" onclick="showSection(&#39;home&#39;)">🏠 Home Guide</button>
+    <button class="nav-tab" onclick="showSection(&#39;wifi&#39;)">📶 Wi-Fi</button>
+    <button class="nav-tab" onclick="showSection(&#39;rules&#39;)">📋 Rules</button>
+    <button class="nav-tab" onclick="showSection(&#39;neighborhood&#39;)">📍 Area</button>
+    <button class="nav-tab" onclick="showSection(&#39;contact&#39;)">💬 Contact</button>
+    <button class="nav-tab active" onclick="showSection(&#39;checkout&#39;)">🧳 Check-out</button>
+  </div>
+
+  <!-- ── ARRIVAL ────────────────────────────────────────── -->
+  <div class="section" id="sec-arrival">
+    <div class="card">
+      <div class="card-title">🏠 Your Address</div>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div>
+          <div class="info-label">Property Address</div>
+          <div class="info-val">Room 965<br>Air Residences, Malugay Street, Brgy. San Antonio, Makati, Philippines</div>
+        </div>
+      </div>
+      <a href="https://maps.app.goo.gl/ppBcCAhrwm9eyZ5T6" class="cta-btn cta-teal" style="margin-top:14px">
+        🗺️ Open in Maps
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔑 Key &amp; Entry</div>
+      <div class="info-row">
+        <span class="info-icon">📬</span>
+        <div>
+          <div class="info-label">Key Location</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Your key is inside the <strong>mailbox</strong> at the building entrance. Use it to unlock the unit door.</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🚪</span>
+        <div>
+          <div class="info-label">Entry Notes</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Retrieve the key from the mailbox, unlock the front door, and return the key to the mailbox when you check out.</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🅿️</span>
+        <div>
+          <div class="info-label">Parking</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Mall pay parking is available within the building. Rate: <strong>₱20/hour</strong>.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🚶 Step-by-Step Arrival</div>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-text"><strong>Getting here from the airport</strong><span>We recommend using <strong>Grab</strong> or <strong>InDrive</strong>Set your destination to: <em>"Air Residences, Makati City, Metro Manila"</em></span></div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-text"><strong>Register at the front desk</strong><span>Present your <strong>authorization form</strong> and a valid ID to the building lobby staff.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-text"><strong>Pick up your keys</strong><span>Retrieve your key from inside the <strong>mailbox.</strong></span></div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-text"><strong>Proceed to the designated elevator</strong><span>Use the elevator assigned to your floor as directed by front desk staff.</span></div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-text"><strong>Enjoy your stay! 🎉</strong><span>Make yourself at home — we hope you have a wonderful time at Casa Chico Makati.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HOME GUIDE ─────────────────────────────────────── -->
+  <div class="section" id="sec-home">
+    <div class="card" style="background: linear-gradient(135deg, #FDF6E3, #F5EFE6); border-left: 3px solid var(--gold);">
+      <div class="card-title">🏢 Gentle Reminder</div>
+      <p style="font-size:14px; color:var(--warm-600); line-height:1.75;">
+        This is <strong style="color:var(--warm-800);">NOT A HOTEL</strong> establishment. You are staying in a <strong style="color:var(--warm-800);">shared residential building</strong> with full-time residents who live here permanently.<br><br>
+        Kindly avoid storing or stacking garbage inside the unit, as this may attract pests and insects. Please dispose of trash regularly in the <strong style="color:var(--warm-800);">garbage room near the elevators</strong>.<br><br>
+        Thank you for helping maintain a clean and peaceful environment for everyone. 🙏
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🏠 Room by Room Guide</div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left">
+            <span class="acc-icon">🛋️</span>
+            <span class="acc-label">Living Room</span>
+          </div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <strong>TV:</strong> Use the black remote. Netflix is already logged in and ready to use. If you find it has been logged out, just message us and we'll help you get back in.<br><br>
+          <strong>AC:</strong> Use the white remote. Recommended temperature is <strong>20°C</strong>.
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left">
+            <span class="acc-icon">🍳</span>
+            <span class="acc-label">Kitchen</span>
+          </div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <strong>Cooking tools:</strong> All basic cooking tools are available inside the cabinets — feel free to use them.<br><br>
+          <strong>Important:</strong> Please do not leave dirty plates and utensils in the sink, as this may attract unwanted pests and insects. Do not open cabinets with locks, as we used them for storage of cleaning tools.<br><br>
+          <strong>Trash:</strong> Please dispose of your garbage in the <strong>garbage room near the elevators</strong>.
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left">
+            <span class="acc-icon">🛏️</span>
+            <span class="acc-label">Bedrooms</span>
+          </div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <strong>Bed:</strong> Queen size bed with 4 pillows and duvet<br><br>
+          <strong>Towels:</strong> Fresh towels are provided and placed on top of the bed.
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left">
+            <span class="acc-icon">🚿</span>
+            <span class="acc-label">Bathroom</span>
+          </div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <strong>Shower:</strong> Hot water comes from the telephone shower head, turn the knob to redirect the water. Adjust the heater thru the separate heater box located on top of the shower.<br><br>
+          <strong>Supplies:</strong> Shampoo, conditioner, body wash, and hair dryer are provided.<br><br>
+          <strong>Toilet:</strong> Please don't flush wipes or paper towels or anything — trash bin is provided for these.
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+
+  </div>
+
+  <!-- ── WI-FI ───────────────────────────────────────────── -->
+  <div class="section" id="sec-wifi">
+    <div class="card">
+      <div class="card-title">📶 Wi-Fi Details</div>
+      <div class="info-row">
+        <span class="info-icon">📡</span>
+        <div>
+          <div class="info-label">Network Name (SSID)</div>
+          <div class="info-val" style="display:flex;align-items:center;flex-wrap:wrap;gap:4px">WOOFY_F06D_5G<span class="copy-wrap">
+              <button class="copy-btn" onclick="copyText(&#39;WOOFY_F06D_5G&#39;, this)">Copy</button>
+              <span class="copy-toast">Copied!</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🔒</span>
+        <div>
+          <div class="info-label">Password</div>
+          <div class="info-val" style="display:flex;align-items:center;flex-wrap:wrap;gap:4px">78303b7df06d<span class="copy-wrap">
+              <button class="copy-btn" onclick="copyText(&#39;78303b7df06d&#39;, this)">Copy</button>
+              <span class="copy-toast">Copied!</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">⚡</span>
+        <div>
+          <div class="info-label">Speed</div>
+          <div class="info-val">50 Mbps — great for streaming &amp; video calls</div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div class="card">
+      <div class="card-title">📺 Streaming &amp; Entertainment</div>
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left">
+            <span class="acc-icon">🎬</span>
+            <span class="acc-label">TV Streaming Apps</span>
+          </div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <strong>Netflix</strong> is logged in and ready. Please do not log out or change account settings.<br><br>In case it is not logged in, please message us so we can assist you</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RULES ──────────────────────────────────────────── -->
+  <div class="section" id="sec-rules">
+
+    <div class="card">
+      <div class="card-title">✅ What's Allowed</div>
+      <div class="rules-grid">
+        <div class="rule-tag allowed"><span class="rt-icon">🥂</span> Drinks</div>
+        <div class="rule-tag allowed"><span class="rt-icon">🍛</span>Outside food</div>
+        <div class="rule-tag allowed"><span class="rt-icon">🥘</span>Light cooking</div>
+        <div class="rule-tag allowed"><span class="rt-icon">🏖️</span>Pool use with a fee</div>
+        <div class="rule-tag allowed"><span class="rt-icon">🏃</span>Amenity use</div>
+        <div class="rule-tag allowed"><span class="rt-icon">👤</span>Visitor (until 10pm)</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🚫 House Rules</div>
+      <div class="rules-grid">
+        <div class="rule-tag disallowed"><span class="rt-icon">🚬</span>NO SMOKING (5,000PHP FINE)</div>
+        <div class="rule-tag disallowed"><span class="rt-icon">🎉</span> No parties/events</div>
+        <div class="rule-tag disallowed"><span class="rt-icon">🔊</span> Quiet after 10 PM</div>
+        <div class="rule-tag disallowed"><span class="rt-icon">👥</span> Guests listed only</div>
+        <div class="rule-tag disallowed"><span class="rt-icon">🎥</span> No cameras indoors</div>
+        <div class="rule-tag disallowed"><span class="rt-icon">🐕</span>No pets allowed</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🌙 Quiet Hours &amp; Neighbors</div>
+      <div class="info-row">
+        <span class="info-icon">🔇</span>
+        <div>
+          <div class="info-label">Quiet Hours</div>
+          <div class="info-val">10:00 PM – 8:00 AM</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🏢</span>
+        <div>
+          <div class="info-label">Building Notes</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Please note that this is a residential building, NOT A HOTEL establishment. We ask that you respect our neighbors by keeping voices low in hallways, and common areas.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔥 Emergency Info</div>
+      <div class="info-row">
+        <span class="info-icon">🧯</span>
+        <div>
+          <div class="info-label">Fire Extinguisher</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Next to the refrigerator. Smoke detectors are in every room — do not cover or remove.</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🚨</span>
+        <div>
+          <div class="info-label">Emergency Exit</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Use the stairwell — <strong>do not use the elevator</strong> during a fire. Emergency exit at the end of the elevators/hallway.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NEIGHBORHOOD ───────────────────────────────────── -->
+  <div class="section" id="sec-neighborhood">
+    <div class="card">
+      <div class="card-title">📍 Explore the Area</div>
+      <a href="https://maps.app.goo.gl/zodkk2JAYzsny3j49" class="map-placeholder">
+        <span>🗺️</span>
+        <span>Open Full Map</span>
+      </a>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left"><span class="acc-icon">☕</span><span class="acc-label">Coffee &amp; Breakfast</span></div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <div class="place-item">
+            <span class="place-icon">☕</span>
+            <div class="place-info"><div class="place-name">Zus Coffee</div><div class="place-meta">We personally recommend this</div></div>
+            <span class="place-dist">220 meters</span>
+          </div>
+          <div class="place-item">
+            <span class="place-icon">🥐</span>
+            <div class="place-info"><div class="place-name">Breadtalk</div><div class="place-meta">Our go-to bakery shop</div></div>
+            <span class="place-dist">220 meters</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left"><span class="acc-icon">🍽️</span><span class="acc-label">Restaurants</span></div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <div class="place-item">
+            <span class="place-icon">🥘</span>
+            <div class="place-info"><div class="place-name">Recipe's by Cafe Metro</div><div class="place-meta">Filipino cuisines. Our go-to restaurant</div></div>
+            <span class="place-dist">220 meters</span>
+          </div>
+          <div class="place-item">
+            <span class="place-icon">🍜</span>
+            <div class="place-info"><div class="place-name">Nanyang</div><div class="place-meta">Singaporean inspired restaurant and cafe</div></div>
+            <span class="place-dist">220 meters</span>
+          </div>
+          <div class="place-item">
+            <span class="place-icon">🍙</span>
+            <div class="place-info"><div class="place-name">Yuki</div><div class="place-meta">Japanese food</div></div>
+            <span class="place-dist">220 meters</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left"><span class="acc-icon">🛒</span><span class="acc-label">Groceries &amp; Essentials (right below the building)</span></div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <div class="place-item">
+            <span class="place-icon">🛒</span>
+            <div class="place-info"><div class="place-name">Savemore</div><div class="place-meta">Open 10 AM – 9 PM</div></div>
+            <span class="place-dist">0 meters</span>
+          </div>
+          <div class="place-item">
+            <span class="place-icon">💊</span>
+            <div class="place-info"><div class="place-name">Watsons Pharmacy</div><div class="place-meta">24 hours</div></div>
+            <span class="place-dist">0 meters</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left"><span class="acc-icon">🏤</span><span class="acc-label">Malls &amp; Activities</span></div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <div class="place-item">
+            <span class="place-icon">🏤</span>
+            <div class="place-info"><div class="place-name">SM Mall of Asia</div><div class="place-meta">Biggest mall in the Philippines</div></div>
+            <span class="place-dist">6.7 km</span>
+          </div>
+          <div class="place-item">
+            <span class="place-icon">🚲</span>
+            <div class="place-info"><div class="place-name">Salcedo Park</div><div class="place-meta">Worth a walk around</div></div>
+            <span class="place-dist">2.3 km</span>
+          </div>
+          <div class="place-item">
+            <span class="place-icon">🎨</span>
+            <div class="place-info"><div class="place-name">Ayala Museum</div><div class="place-meta">Worth a look</div></div>
+            <span class="place-dist">1.6km</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item open">
+        <button class="accordion-trigger" onclick="toggleAccordion(this)">
+          <div class="accordion-trigger-left"><span class="acc-icon">🚗</span><span class="acc-label">Getting Around</span></div>
+          <span class="acc-arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <strong>Grab/inDrive</strong>Best rates. For fix rates, we highly recommend riding thru this app compared to the traditional taxis<br><br>
+          
+          <strong>Parking tip:</strong>Mall pay parking is open 24/7 but it is first-come-first serve basis. You may check pay parking at Assembly Grounds the nearest pay parking in Air Residences        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── CONTACT ────────────────────────────────────────── -->
+  <div class="section" id="sec-contact">
+
+    <a href="tel:911" class="sos-banner">
+      <span class="sos-icon">🚨</span>
+      <div class="sos-text">
+        <div class="sos-title">Emergency — Call 911</div>
+        <div class="sos-sub">Tap to call emergency services</div>
+      </div>
+    </a>
+
+    <div class="card">
+      <div class="card-title">👋 Your Host Team</div>
+
+      <div class="contact-card">
+        <div class="contact-left">
+          <div class="contact-avatar">😊</div>
+          <div>
+            <div class="contact-name">Joshua Natividad</div>
+            <div class="contact-role">Your Host — available 24/7</div>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="sms:+639662775947" class="contact-btn btn-msg" title="Message">💬</a>
+          <a href="tel:+639662775947" class="contact-btn btn-call" title="Call">📞</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-left">
+          <div class="contact-avatar">😊</div>
+          <div>
+            <div class="contact-name">John Araullo</div>
+            <div class="contact-role">Your Host - available 24/7</div>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="sms:+639561357653" class="contact-btn btn-msg" title="Message">💬</a>
+          <a href="tel:+639561357653" class="contact-btn btn-call" title="Call">📞</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-title">🆘 Local Emergency Services</div>
+      <div class="contact-card">
+        <div class="contact-left">
+          <div class="contact-avatar" style="background:linear-gradient(135deg,#FEE2E2,#FECACA)">🏥</div>
+          <div>
+            <div class="contact-name">Makati Medical City</div>
+            <div class="contact-role">Nearest hospital — 500 meters</div>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="tel:++632 8888 8910" class="contact-btn btn-call" title="Call">📞</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-left">
+          <div class="contact-avatar" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE)">🚓</div>
+          <div>
+            <div class="contact-name">Makati City Central Police Station</div>
+            <div class="contact-role">Non-urgent police matters</div>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="tel: (02) 887 2484" class="contact-btn btn-call" title="Call">📞</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💌 Leave a Review</div>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:14px">We hope you enjoy your stay! As a small business owner here in the Philippines, your review really matters to us. It helps boost our small growing business. ⭐ </p>
+      <a href="https://airbnb.com/" class="cta-btn cta-primary">⭐ Leave a Review on Airbnb</a>
+    </div>
+  </div>
+
+  <!-- ── CHECK-OUT ───────────────────────────────────────── -->
+  <div class="section visible" id="sec-checkout">
+    <div class="card">
+      <div class="card-title">🧳 Check-out Time</div>
+      <div class="info-row">
+        <span class="info-icon">⏰</span>
+        <div>
+          <div class="info-label">Check-out By</div>
+          <div class="info-val" style="font-size:22px;font-weight:700;color:var(--brand)">12:00 PM</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🔑</span>
+        <div>
+          <div class="info-label">Keys / Access</div>
+          <div class="info-val" style="font-size:14px;color:var(--gray-600)">Please return the key to the <strong>mailbox</strong> before you leave.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">✅ Departure Checklist</div>
+      <div id="checklistItems"><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Wash used dishes and utensils</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Turn off all appliances (except Refrigerator and wifi router)</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Leave used towels in the bathroom</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Empty all trash bins and throw them in the garbage room near the elevators</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Close and lock all windows</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Return items to their original place</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Make sure no personal belongings are left behind</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Lock the door</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Return the keys to the mailbox 🔑</span>
+      </div><div style="display: flex; align-items: center; gap: 12px; padding: 12px 0px; border-bottom: 1px solid var(--gray-100); cursor: pointer; opacity: 1; transition: opacity 0.2s;">
+        <div style="
+          width:24px; height:24px; border-radius:50%; border:2px solid var(--gray-200);
+          background:transparent;
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        "></div>
+        <span style="font-size:14px; text-decoration:none; color:var(--gray-800)">Please message us with the picture of the key inside the mailbox 📩 </span>
+      </div></div>
+      <div style="margin-top:14px;text-align:center">
+        <div id="checklistProgress" style="font-size:13px;color:var(--gray-400)">0 of 10 completed</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💬 Before You Leave</div>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:14px">It was a pleasure hosting you! We hope you had an amazing time in Makati. Safe travels! Book with us again to get 10% DISCOUNT</p>
+      <a href="https://airbnb.com/" class="cta-btn cta-primary">⭐ Leave a Review</a>
+      <a href="http://m.me/casachicomakati" class="cta-btn cta-teal" style="margin-top:8px">✨ ✨ Book Again ✨ ✨</a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- ── BOTTOM NAV ────────────────────────────────────────── -->
+<nav class="bottom-nav">
+  <button class="bn-item" onclick="showSection(&#39;arrival&#39;)" id="bn-arrival">
+    <span class="bn-icon">🔑</span>Arrival
+  </button>
+  <button class="bn-item" onclick="showSection(&#39;home&#39;)" id="bn-home">
+    <span class="bn-icon">🏠</span>Home
+  </button>
+  <button class="bn-item" onclick="showSection(&#39;wifi&#39;)" id="bn-wifi">
+    <span class="bn-icon">📶</span>Wi-Fi
+  </button>
+  <button class="bn-item" onclick="showSection(&#39;neighborhood&#39;)" id="bn-neighborhood">
+    <span class="bn-icon">📍</span>Area
+  </button>
+  <button class="bn-item active" onclick="showSection(&#39;contact&#39;)" id="bn-contact">
+    <span class="bn-icon">💬</span>Contact
+  </button>
+</nav>
+
+<script>
+  // ── Navigation ──────────────────────────────────────────
+  const sections = ['arrival','home','wifi','rules','neighborhood','contact','checkout'];
+  const navLabels = { arrival:'arrival', home:'home', wifi:'wifi', rules:'arrival', neighborhood:'neighborhood', contact:'contact', checkout:'contact' };
+
+  function showSection(id) {
+    sections.forEach(s => {
+      document.getElementById('sec-' + s)?.classList.remove('visible');
+    });
+    document.getElementById('sec-' + id)?.classList.add('visible');
+
+    // Update nav tabs
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    const tabs = document.querySelectorAll('.nav-tab');
+    tabs.forEach(t => {
+      if (t.getAttribute('onclick')?.includes("'" + id + "'")) t.classList.add('active');
+    });
+
+    // Update bottom nav
+    document.querySelectorAll('.bn-item').forEach(b => b.classList.remove('active'));
+    const bnId = navLabels[id] || id;
+    document.getElementById('bn-' + bnId)?.classList.add('active');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── Accordion ───────────────────────────────────────────
+  function toggleAccordion(trigger) {
+    const item = trigger.closest('.accordion-item');
+    item.classList.toggle('open');
+  }
+
+  // ── Copy to clipboard ───────────────────────────────────
+  function copyText(text, btn) {
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = btn.nextElementSibling;
+      toast.classList.add('show');
+      btn.textContent = '✓';
+      setTimeout(() => {
+        toast.classList.remove('show');
+        btn.textContent = 'Copy';
+      }, 2000);
+    });
+  }
+
+  // ── Departure Checklist ─────────────────────────────────
+  const checklistTasks = [
+    { id: 'c1', text: 'Wash used dishes and utensils' },
+    { id: 'c2', text: 'Turn off all appliances (except refrigerator and Wi-Fi router)' },
+    { id: 'c3', text: 'Leave used towels in the bathroom' },
+    { id: 'c4', text: 'Empty all trash bins and throw them in the garbage room near the elevators' },
+    { id: 'c5', text: 'Close and lock all windows' },
+    { id: 'c6', text: 'Return items to their original place' },
+    { id: 'c7', text: 'Make sure no personal belongings are left behind' },
+    { id: 'c8', text: 'Lock the door 🚪' },
+    { id: 'c9', text: 'Return the keys to the mailbox 🔑' },
+    { id: 'c10', text: 'Message us with a picture of the key inside the mailbox 📩' },
+  ];
+
+  const completed = new Set(JSON.parse(localStorage.getItem('checklistDone') || '[]'));
+
+  function renderChecklist() {
+    const container = document.getElementById('checklistItems');
+    container.innerHTML = '';
+    checklistTasks.forEach(task => {
+      const done = completed.has(task.id);
+      const item = document.createElement('div');
+      item.style.cssText = `
+        display:flex; align-items:center; gap:12px; padding:12px 0;
+        border-bottom:1px solid var(--warm-100); cursor:pointer;
+        opacity:${done ? '0.5' : '1'}; transition: opacity 0.2s;
+      `;
+      item.innerHTML = `
+        <div style="
+          width:22px; height:22px; border-radius:4px; border:2px solid ${done ? 'var(--gold)' : '#1a1a1a'};
+          background:${done ? 'var(--gold)' : 'transparent'};
+          display:flex; align-items:center; justify-content:center;
+          flex-shrink:0; transition:all 0.2s;
+        ">${done ? '<span style="color:#2C2416;font-size:13px;font-weight:700">✓</span>' : ''}</div>
+        <span style="font-size:14px; text-decoration:${done ? 'line-through' : 'none'}; color:${done ? 'var(--warm-400)' : 'var(--warm-800)'}">${task.text}</span>
+      `;
+      item.onclick = () => {
+        if (completed.has(task.id)) completed.delete(task.id);
+        else completed.add(task.id);
+        localStorage.setItem('checklistDone', JSON.stringify([...completed]));
+        renderChecklist();
+      };
+      container.appendChild(item);
+    });
+
+    const n = completed.size;
+    const total = checklistTasks.length;
+    const prog = document.getElementById('checklistProgress');
+    if (n === total) {
+      prog.innerHTML = '<span style="color:var(--gold-dark);font-weight:600;font-size:14px">🎉 All done — have a safe trip!</span>';
+    } else {
+      prog.textContent = `${n} of ${total} completed`;
+    }
+  }
+
+  renderChecklist();
+</script>
+
+
+</body></html>
